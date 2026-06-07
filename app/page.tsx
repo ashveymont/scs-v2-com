@@ -3,7 +3,7 @@ export default function Home() {
     <div style={{ backgroundColor: "var(--color-stone)" }}>
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="flex flex-col items-center justify-center px-6 py-16" style={{ minHeight: "calc(100vh - 62px)" }}>
+      <section className="flex flex-col items-center justify-center px-6" style={{ minHeight: "calc(100vh - 62px)" }}>
         <div className="w-full max-w-2xl flex flex-col items-center text-center">
 
           {/* Label */}
@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* ── Founding Insight ─────────────────────────────────────────────── */}
-      <section className="flex flex-col items-center px-6 py-32">
+      <section className="flex flex-col items-center px-6 py-20">
         <div className="w-full max-w-[680px] flex flex-col items-center text-center">
 
           {/* Divider */}
@@ -791,7 +791,7 @@ export default function Home() {
           </nav>
 
           {/* Right — tagline + copyright */}
-          <div className="flex flex-col justify-between gap-8">
+          <div className="flex flex-col justify-between gap-8" style={{ minWidth: "280px" }}>
             <p
               style={{
                 fontFamily: "var(--font-inter), system-ui, sans-serif",
@@ -809,6 +809,7 @@ export default function Home() {
                 color: "rgba(92, 100, 112, 0.40)",
                 fontSize: "10px",
                 letterSpacing: "0.04em",
+                whiteSpace: "nowrap",
               }}
             >
               &copy; MMXXVI Sovereign Chess Society. All rights reserved.
