@@ -37,14 +37,35 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
-.nav-link:hover {
-  color: var(--color-charcoal);
-}
+/* ── Shared typographic utilities ───────────────────────────────────────── */
 
-.si-cta:hover {
-  color: var(--color-stone);
-}
+@layer components {
+  /* Section labels: FOUNDING INSIGHT, THE SOCIETY, etc. */
+  .label {
+    font-family: var(--font-mono), "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-slate);
+  }
 
-.footer-link:hover {
-  color: var(--color-stone);
+  /* Index markers: 01, 02, 03 … */
+  .index {
+    font-family: var(--font-mono), "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--color-brass);
+  }
+
+  .nav-link:hover {
+    color: var(--color-charcoal);
+  }
+
+  .si-cta:hover {
+    color: var(--color-stone);
+  }
+
+  .footer-link:hover {
+    color: var(--color-stone);
+  }
 }

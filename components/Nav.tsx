@@ -3,7 +3,7 @@ export default function Nav() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8"
+      className="fixed top-0 left-0 right-0 z-50"
       style={{
         height: "62px",
         backgroundColor: "rgba(245, 242, 236, 0.95)",
@@ -12,6 +12,8 @@ export default function Nav() {
         borderBottom: "1px solid rgba(92, 100, 112, 0.10)",
       }}
     >
+      <div className="w-full max-w-[1080px] mx-auto px-8 h-full flex items-center justify-between">
+
       {/* Wordmark */}
       <a
         href="/"
@@ -46,6 +48,8 @@ export default function Nav() {
           </a>
         ))}
       </nav>
+
+      </div>
     </header>
   );
 }

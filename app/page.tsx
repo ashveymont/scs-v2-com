@@ -3,17 +3,11 @@ export default function Home() {
     <div style={{ backgroundColor: "var(--color-stone)" }}>
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 py-28">
+      <section className="flex flex-col items-center justify-center px-6 py-16" style={{ minHeight: "calc(100vh - 62px)" }}>
         <div className="w-full max-w-2xl flex flex-col items-center text-center">
 
           {/* Label */}
-          <p
-            className="text-xs tracking-[0.22em] uppercase mb-12"
-            style={{
-              fontFamily: "var(--font-mono), 'Courier New', monospace",
-              color: "var(--color-slate)",
-            }}
-          >
+          <p className="label mb-5">
             Dubai&nbsp;&bull;&nbsp;Founded MMXXVI
           </p>
 
@@ -85,15 +79,7 @@ export default function Home() {
           />
 
           {/* Section label */}
-          <p
-            className="text-xs tracking-[0.22em] uppercase mb-10"
-            style={{
-              fontFamily: "var(--font-mono), 'Courier New', monospace",
-              color: "var(--color-slate)",
-            }}
-          >
-            The Founding Insight
-          </p>
+          <p className="label mb-10">The Founding Insight</p>
 
           {/* Headline */}
           <h2
@@ -146,13 +132,7 @@ export default function Home() {
         <div className="w-full max-w-[1080px] mx-auto">
 
           {/* Section label */}
-          <p
-            className="text-xs tracking-[0.22em] uppercase mb-10"
-            style={{
-              fontFamily: "var(--font-mono), 'Courier New', monospace",
-              color: "var(--color-brass)",
-            }}
-          >
+          <p className="label mb-10" style={{ color: "var(--color-brass)" }}>
             The Society
           </p>
 
@@ -177,15 +157,7 @@ export default function Home() {
               className="pt-8"
               style={{ borderTop: "1px solid rgba(245, 242, 236, 0.15)" }}
             >
-              <p
-                className="text-xs tracking-[0.18em] mb-6"
-                style={{
-                  fontFamily: "var(--font-mono), 'Courier New', monospace",
-                  color: "var(--color-brass)",
-                }}
-              >
-                01
-              </p>
+              <p className="index mb-6">01</p>
               <h3
                 className="font-normal mb-5"
                 style={{
@@ -216,15 +188,7 @@ export default function Home() {
               className="pt-8"
               style={{ borderTop: "1px solid rgba(245, 242, 236, 0.15)" }}
             >
-              <p
-                className="text-xs tracking-[0.18em] mb-6"
-                style={{
-                  fontFamily: "var(--font-mono), 'Courier New', monospace",
-                  color: "var(--color-brass)",
-                }}
-              >
-                02
-              </p>
+              <p className="index mb-6">02</p>
               <h3
                 className="font-normal mb-5"
                 style={{
@@ -255,15 +219,7 @@ export default function Home() {
               className="pt-8"
               style={{ borderTop: "1px solid rgba(245, 242, 236, 0.15)" }}
             >
-              <p
-                className="text-xs tracking-[0.18em] mb-6"
-                style={{
-                  fontFamily: "var(--font-mono), 'Courier New', monospace",
-                  color: "var(--color-brass)",
-                }}
-              >
-                03
-              </p>
+              <p className="index mb-6">03</p>
               <h3
                 className="font-normal mb-5"
                 style={{
@@ -302,15 +258,7 @@ export default function Home() {
 
             {/* Left column */}
             <div className="md:pt-6">
-              <p
-                className="text-xs tracking-[0.22em] uppercase mb-10"
-                style={{
-                  fontFamily: "var(--font-mono), 'Courier New', monospace",
-                  color: "var(--color-slate)",
-                }}
-              >
-                The Society
-              </p>
+              <p className="label mb-10">The Society</p>
 
               <h2
                 className="font-normal mb-6 tracking-[-0.01em]"
@@ -382,15 +330,7 @@ export default function Home() {
                   className="py-6 flex gap-8 items-baseline"
                   style={{ borderBottom: "1px solid rgba(92, 100, 112, 0.15)" }}
                 >
-                  <p
-                    className="shrink-0 text-xs tracking-[0.18em] w-6"
-                    style={{
-                      fontFamily: "var(--font-mono), 'Courier New', monospace",
-                      color: "var(--color-brass)",
-                    }}
-                  >
-                    {pillar.n}
-                  </p>
+                  <p className="index shrink-0 w-6">{pillar.n}</p>
                   <div>
                     <p
                       className="mb-1"
@@ -435,13 +375,7 @@ export default function Home() {
             <div>
 
               {/* Section label */}
-              <p
-                className="text-xs tracking-[0.22em] uppercase mb-12"
-                style={{
-                  fontFamily: "var(--font-mono), 'Courier New', monospace",
-                  color: "var(--color-brass)",
-                }}
-              >
+              <p className="label mb-12" style={{ color: "var(--color-brass)" }}>
                 The Strategic Position Review
               </p>
 
@@ -552,13 +486,7 @@ export default function Home() {
         <div className="w-full max-w-[720px] mx-auto">
 
           {/* Section label */}
-          <p
-            className="text-xs tracking-[0.22em] uppercase mb-12"
-            style={{
-              fontFamily: "var(--font-mono), 'Courier New', monospace",
-              color: "var(--color-brass)",
-            }}
-          >
+          <p className="label mb-12" style={{ color: "var(--color-brass)" }}>
             The Chamber
           </p>
 
@@ -613,13 +541,7 @@ export default function Home() {
             <div>
 
               {/* Section label */}
-              <p
-                className="text-xs tracking-[0.22em] uppercase mb-10"
-                style={{
-                  fontFamily: "var(--font-mono), 'Courier New', monospace",
-                  color: "var(--color-brass)",
-                }}
-              >
+              <p className="label mb-10" style={{ color: "var(--color-brass)" }}>
                 Sovereign Intelligence
               </p>
 
@@ -752,13 +674,7 @@ export default function Home() {
         <div className="w-full max-w-[640px] mx-auto flex flex-col items-center text-center">
 
           {/* Section label */}
-          <p
-            className="text-xs tracking-[0.22em] uppercase mb-10"
-            style={{
-              fontFamily: "var(--font-mono), 'Courier New', monospace",
-              color: "var(--color-brass)",
-            }}
-          >
+          <p className="label mb-10" style={{ color: "var(--color-brass)" }}>
             Membership
           </p>
 
