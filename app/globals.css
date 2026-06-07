@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-stone: #F5F2EC;
+  --color-navy: #0D1321;
+  --color-charcoal: #171717;
+  --color-slate: #5C6470;
+  --color-brass: #B08D57;
+
+  --font-display: Georgia, "Times New Roman", serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-stone: var(--color-stone);
+  --color-navy: var(--color-navy);
+  --color-charcoal: var(--color-charcoal);
+  --color-slate: var(--color-slate);
+  --color-brass: var(--color-brass);
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: var(--color-stone);
+  color: var(--color-charcoal);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-stone);
+  color: var(--color-charcoal);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.nav-link:hover {
+  color: var(--color-charcoal);
+}
+
+.si-cta:hover {
+  color: var(--color-stone);
+}
+
+.footer-link:hover {
+  color: var(--color-stone);
 }
