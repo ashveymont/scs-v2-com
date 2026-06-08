@@ -57,14 +57,50 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-brass);
   }
 
+  /* Nav links — color shift only, no movement */
+  .nav-link {
+    transition: color 200ms ease;
+  }
   .nav-link:hover {
     color: var(--color-charcoal);
   }
 
-  .si-cta:hover {
-    color: var(--color-stone);
+  /* Primary CTA button */
+  .btn-primary {
+    transition: background-color 200ms ease;
+  }
+  .btn-primary:hover {
+    background-color: #1a2535 !important;
   }
 
+  /* Secondary outlined button */
+  .btn-secondary {
+    transition: border-color 200ms ease, color 200ms ease;
+  }
+  .btn-secondary:hover {
+    border-color: rgba(13, 19, 33, 0.6) !important;
+  }
+
+  /* Text links (→ style) */
+  .link-arrow {
+    transition: opacity 150ms ease;
+  }
+  .link-arrow:hover {
+    opacity: 0.7;
+  }
+
+  /* Sovereign Intelligence CTA */
+  .si-cta {
+    transition: opacity 150ms ease;
+  }
+  .si-cta:hover {
+    opacity: 0.7;
+  }
+
+  /* Footer links */
+  .footer-link {
+    transition: color 200ms ease;
+  }
   .footer-link:hover {
     color: var(--color-stone);
   }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Mono, Playfair_Display } from "next/font/google";
 import Nav from "@/components/Nav";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const inter = Inter({
@@ -35,11 +36,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${ibmPlexMono.variable} ${playfairDisplay.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${ibmPlexMono.variable} ${playfairDisplay.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col" style={{ paddingTop: "62px" }}>
-          <Nav />
-          {children}
-        </body>
+        <Nav />
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }
