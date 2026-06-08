@@ -1,0 +1,64 @@
+{
+  "redirects": [
+    {
+      "source": "/apply",
+      "destination": "/application",
+      "permanent": true
+    },
+    {
+      "source": "/members",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/application",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/the-conclave",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/journal/what-is-sovereign-chess",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/journal/chess-and-capital-the-strategic-overlap",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/journal/why-dubai-founders-are-returning-to-chess",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/journal/five-chess-principles-for-high-stakes-decisions",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/journal/sovereign-chess-vs-casual-chess",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/journal/the-architecture-of-patience",
+      "destination": "/journal",
+      "permanent": true
+    }
+  ]
+}
