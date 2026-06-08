@@ -1,6 +1,7 @@
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import RevealSection from "@/components/RevealSection";
+import ParallaxSection from "@/components/ParallaxSection";
 
 export default function Home() {
   return (
@@ -76,23 +77,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Section A: Editorial Image ────────────────────────────────────── */}
-      {/* C3 — mobile: dining-room-wrap enforces min-height + cover crop via CSS */}
-      {/* R1 — mobile: mt-12 mb-12 (was mt-24 mb-24) */}
-      <div className="mt-12 mb-12 md:mt-24 md:mb-24 dining-room-wrap">
-        <FadeIn style={{ width: "100%" }}>
-          <Image
-            src="/images/dining-room.png"
-            alt=""
-            width={2016}
-            height={864}
-            quality={100}
-            priority={true}
-            style={{ width: "100%", height: "auto", display: "block", borderRadius: 0 }}
-            sizes="100vw"
-          />
-        </FadeIn>
-      </div>
+      {/* ── Section A: Parallax Image ─────────────────────────────────────── */}
+      {/* Portrait image (5464×8192) scrolls top→bottom through a 21:9 window */}
+      <ParallaxSection />
 
       {/* ── Founding Insight ─────────────────────────────────────────────── */}
       {/* R1 — mobile: py-12 (was py-20) */}
