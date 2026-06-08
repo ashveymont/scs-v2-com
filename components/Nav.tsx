@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 export default function Nav() {
   const links = [
-    { label: "About",      href: "#" },
+    { label: "About",      href: "/about" },
     { label: "Membership", href: "/membership" },
-    { label: "Journal",    href: "#" },
+    { label: "Journal",    href: "/journal" },
     { label: "Apply",      href: "/application" },
   ] as const;
   const [scrolled, setScrolled] = useState(false);

@@ -2,7 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function ParallaxSection() {
+type Props = {
+  src?: string;
+  aspectRatio?: string;
+  maxWidth?: string;
+  className?: string;
+};
+
+export default function ParallaxSection({
+  src = "/images/dining-background.jpg",
+  aspectRatio = "21/9",
+  maxWidth,
+  className = "mt-12 mb-12 md:mt-24 md:mb-24",
+}: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
   const [ty, setTy] = useState(0);
@@ -25,7 +37,6 @@ export default function ParallaxSection() {
       rafRef.current = requestAnimationFrame(update);
     };
 
-    // Start the RAF loop once the image has dimensions
     const start = () => {
       rafRef.current = requestAnimationFrame(update);
     };
@@ -42,32 +53,34 @@ export default function ParallaxSection() {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="mt-12 mb-12 md:mt-24 md:mb-24"
-      style={{
-        position: "relative",
-        width: "100%",
-        aspectRatio: "21/9",
-        minHeight: "260px",
-        overflow: "hidden",
-      }}
-    >
-      <img
-        ref={imgRef}
-        src="/images/dining-background.jpg"
-        alt=""
+    <div style={maxWidth ? { maxWidth, margin: "0 auto", width: "100%" } : undefined}>
+      <div
+        ref={containerRef}
+        className={className}
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
+          position: "relative",
           width: "100%",
-          height: "auto",
-          display: "block",
-          transform: `translateY(${ty}px)`,
-          willChange: "transform",
+          aspectRatio,
+          minHeight: "260px",
+          overflow: "hidden",
         }}
-      />
+      >
+        <img
+          ref={imgRef}
+          src={src}
+          alt=""
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "auto",
+            display: "block",
+            transform: `translateY(${ty}px)`,
+            willChange: "transform",
+          }}
+        />
+      </div>
     </div>
   );
 }
