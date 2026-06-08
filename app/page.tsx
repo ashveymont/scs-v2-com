@@ -538,7 +538,7 @@ export default function Home() {
             </p>
 
             <a
-              href="#"
+              href="/application"
               className="btn-primary inline-block px-8 py-3.5 text-sm tracking-wide mb-6"
               style={{ backgroundColor: "var(--color-navy)", color: "var(--color-stone)", fontFamily: "var(--font-inter), system-ui, sans-serif", borderRadius: "2px", textDecoration: "none" }}
             >

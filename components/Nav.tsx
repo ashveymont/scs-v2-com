@@ -7,7 +7,7 @@ export default function Nav() {
     { label: "About",      href: "#" },
     { label: "Membership", href: "/membership" },
     { label: "Journal",    href: "#" },
-    { label: "Apply",      href: "/membership#application" },
+    { label: "Apply",      href: "/application" },
   ] as const;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);

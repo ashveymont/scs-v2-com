@@ -24,7 +24,7 @@ export default function Footer() {
             { label: "Membership",             href: "/membership" },
             { label: "Journal",                href: "#" },
             { label: "Sovereign Intelligence", href: "#" },
-            { label: "Application",            href: "/membership#application" },
+            { label: "Application",            href: "/application" },
           ].map((link) => (
             <a
               key={link.label}

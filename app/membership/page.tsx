@@ -77,7 +77,7 @@ export default function MembershipPage() {
             </p>
 
             <a
-              href="#application"
+              href="/application"
               className="btn-primary mt-10 inline-block"
               style={{
                 ...sans,
@@ -633,7 +633,7 @@ export default function MembershipPage() {
               </p>
 
               <a
-                href="#"
+                href="/application"
                 className="btn-primary mt-10 inline-block"
                 style={{
                   ...sans,
