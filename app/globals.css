@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Shared typographic utilities ───────────────────────────────────────── */
 
 @layer components {
-  /* Section labels: FOUNDING INSIGHT, THE SOCIETY, etc. */
+  /* Section labels */
   .label {
     font-family: var(--font-mono), "Courier New", monospace;
     font-size: 11px;
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-brass);
   }
 
-  /* Nav links — color shift only, no movement */
+  /* Nav links */
   .nav-link {
     transition: color 200ms ease;
   }
@@ -81,14 +81,6 @@ h1, h2, h3, h4, h5, h6 {
     border-color: rgba(13, 19, 33, 0.6) !important;
   }
 
-  /* Text links (→ style) */
-  .link-arrow {
-    transition: opacity 150ms ease;
-  }
-  .link-arrow:hover {
-    opacity: 0.7;
-  }
-
   /* Sovereign Intelligence CTA */
   .si-cta {
     transition: opacity 150ms ease;
@@ -103,5 +95,68 @@ h1, h2, h3, h4, h5, h6 {
   }
   .footer-link:hover {
     color: var(--color-stone);
+  }
+}
+
+/* ── Mobile-specific component styles ──────────────────────────────────── */
+
+/* Dining room image — mobile: enforce visible height with cover crop */
+@media (max-width: 767px) {
+  .dining-room-wrap {
+    overflow: hidden;
+  }
+  .dining-room-wrap img {
+    height: 260px !important;
+    object-fit: cover !important;
+    object-position: center 35% !important;
+  }
+}
+
+/* Conclave image grid — mobile: single column stack */
+.conclave-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .conclave-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+/* SPR pull quote — mobile: brass left border restores quote identity */
+@media (max-width: 767px) {
+  .spr-blockquote {
+    border-left: 2px solid rgba(176, 141, 87, 0.4) !important;
+    padding-left: 20px !important;
+    margin-top: 32px !important;
+  }
+}
+
+/* Sovereign Intelligence card — responsive width */
+.si-card {
+  width: 100%;
+  max-width: 260px;
+  height: 360px;
+}
+@media (max-width: 767px) {
+  .si-card {
+    height: auto;
+    min-height: 300px;
+  }
+}
+
+/* Hero + CTA buttons — mobile: fixed max-width, centered */
+@media (max-width: 767px) {
+  .btn-primary,
+  .btn-secondary {
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
   }
 }

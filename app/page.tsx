@@ -7,18 +7,23 @@ export default function Home() {
     <div style={{ backgroundColor: "var(--color-stone)" }}>
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="flex flex-col items-center justify-center px-6" style={{ minHeight: "calc(100vh - 62px)" }}>
+      <section
+        className="flex flex-col items-center justify-center px-6"
+        style={{ minHeight: "calc(100vh - 62px)" }}
+      >
         <div className="w-full max-w-2xl flex flex-col items-center text-center">
 
           <p className="label mb-5">
             Dubai&nbsp;&bull;&nbsp;Founded MMXXVI
           </p>
 
+          {/* N4 — clamp for very small screens */}
           <h1
-            className="text-[2.6rem] leading-[1.18] font-normal mb-8 tracking-[-0.01em]"
+            className="leading-[1.18] font-normal mb-8 tracking-[-0.01em]"
             style={{
               fontFamily: "var(--font-display)",
               color: "var(--color-navy)",
+              fontSize: "clamp(1.8rem, 8vw, 2.6rem)",
             }}
           >
             The Private Home For<br />
@@ -36,6 +41,7 @@ export default function Home() {
             and family office principals who share a common language: chess.
           </p>
 
+          {/* R3 — buttons: fixed max-width via .btn-primary / .btn-secondary CSS */}
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="#"
@@ -70,8 +76,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Section A: Editorial Image — full bleed ──────────────────────── */}
-      <div className="mt-24 mb-24">
+      {/* ── Section A: Editorial Image ────────────────────────────────────── */}
+      {/* C3 — mobile: dining-room-wrap enforces min-height + cover crop via CSS */}
+      {/* R1 — mobile: mt-12 mb-12 (was mt-24 mb-24) */}
+      <div className="mt-12 mb-12 md:mt-24 md:mb-24 dining-room-wrap">
         <FadeIn style={{ width: "100%" }}>
           <Image
             src="/images/dining-room.png"
@@ -87,8 +95,9 @@ export default function Home() {
       </div>
 
       {/* ── Founding Insight ─────────────────────────────────────────────── */}
+      {/* R1 — mobile: py-12 (was py-20) */}
       <RevealSection>
-        <section className="flex flex-col items-center px-6 py-20">
+        <section className="flex flex-col items-center px-6 py-12 md:py-20">
           <div className="w-full max-w-[680px] flex flex-col items-center text-center">
 
             <hr
@@ -141,9 +150,10 @@ export default function Home() {
       </RevealSection>
 
       {/* ── What The Society Is ──────────────────────────────────────────── */}
+      {/* R1 — mobile: py-16 (was py-32) */}
       <RevealSection>
         <section
-          className="px-6 py-32"
+          className="px-6 py-16 md:py-32"
           style={{ backgroundColor: "var(--color-navy)" }}
         >
           <div className="w-full max-w-[1080px] mx-auto">
@@ -152,8 +162,9 @@ export default function Home() {
               The Society
             </p>
 
+            {/* R1 — headline mb-10 on mobile (was mb-20) */}
             <h2
-              className="font-normal mb-20 tracking-[-0.01em]"
+              className="font-normal mb-10 md:mb-20 tracking-[-0.01em]"
               style={{
                 fontFamily: "var(--font-display)",
                 color: "var(--color-stone)",
@@ -201,13 +212,17 @@ export default function Home() {
       </RevealSection>
 
       {/* ── The Seven Pillars ────────────────────────────────────────────── */}
+      {/* R1 — mobile: py-16 (was py-32) */}
+      {/* N1 — label changed to "The Gatherings" */}
       <RevealSection>
-        <section className="px-6 py-32" style={{ backgroundColor: "var(--color-stone)" }}>
+        <section className="px-6 py-16 md:py-32" style={{ backgroundColor: "var(--color-stone)" }}>
           <div className="w-full max-w-[1080px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-16 md:gap-24">
+            {/* R1 — gap-8 on mobile (was gap-16) */}
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 md:gap-24">
 
               <div className="md:pt-6">
-                <p className="label mb-10">The Society</p>
+                {/* N1 — renamed from "The Society" to "The Gatherings" */}
+                <p className="label mb-10">The Gatherings</p>
                 <h2
                   className="font-normal mb-6 tracking-[-0.01em]"
                   style={{ fontFamily: "var(--font-display)", color: "var(--color-navy)", fontSize: "1.75rem", lineHeight: "1.3" }}
@@ -244,17 +259,16 @@ export default function Home() {
         </section>
       </RevealSection>
 
-      {/* ── Section B: Strategic Position Review ─────────────────────────── */}
+      {/* ── Strategic Position Review ─────────────────────────────────────── */}
+      {/* R1 — mobile: py-20 (was py-40) */}
       <RevealSection>
-        <section className="px-6 py-40" style={{ backgroundColor: "var(--color-navy)" }}>
+        <section className="px-6 py-20 md:py-40" style={{ backgroundColor: "var(--color-navy)" }}>
           <div className="w-full max-w-[1080px] mx-auto">
 
-            {/* Label */}
             <p className="label mb-10" style={{ color: "var(--color-brass)" }}>
               The Strategic Position Review
             </p>
 
-            {/* Two-column: headline + copy / pull quote */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 items-start">
 
               {/* Left — headline + body + note */}
@@ -300,9 +314,10 @@ export default function Home() {
               </div>
 
               {/* Right — pull quote */}
+              {/* R2 — .spr-blockquote adds brass left border on mobile */}
               <div className="flex flex-col justify-center md:pt-4">
                 <blockquote
-                  className="font-normal mb-12"
+                  className="spr-blockquote font-normal mb-12"
                   style={{
                     fontFamily: "var(--font-display)",
                     color: "var(--color-stone)",
@@ -331,11 +346,12 @@ export default function Home() {
       </RevealSection>
 
       {/* ── The Chamber ──────────────────────────────────────────────────── */}
+      {/* R1 — mobile: py-16 (was py-36), label mb-8 on mobile */}
       <RevealSection>
-        <section className="px-6 py-36" style={{ backgroundColor: "var(--color-stone)" }}>
+        <section className="px-6 py-16 md:py-36" style={{ backgroundColor: "var(--color-stone)" }}>
           <div className="w-full max-w-[720px] mx-auto">
 
-            <p className="label mb-12" style={{ color: "var(--color-brass)" }}>
+            <p className="label mb-8 md:mb-12" style={{ color: "var(--color-brass)" }}>
               The Chamber
             </p>
 
@@ -365,8 +381,9 @@ export default function Home() {
       </RevealSection>
 
       {/* ── Sovereign Intelligence ───────────────────────────────────────── */}
+      {/* R1 — mobile: py-16 (was py-32) */}
       <RevealSection>
-        <section className="px-6 py-32" style={{ backgroundColor: "var(--color-navy)" }}>
+        <section className="px-6 py-16 md:py-32" style={{ backgroundColor: "var(--color-navy)" }}>
           <div className="w-full max-w-[1080px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-24 items-center">
 
@@ -394,8 +411,16 @@ export default function Home() {
                 </a>
               </div>
 
+              {/* R4 — .si-card makes width responsive (100% / max 260px) */}
               <div className="flex justify-center md:justify-end">
-                <div className="flex flex-col justify-between" style={{ width: "260px", height: "360px", padding: "32px 28px 28px", border: "1px solid rgba(245, 242, 236, 0.12)", backgroundColor: "rgba(245, 242, 236, 0.03)" }}>
+                <div
+                  className="si-card flex flex-col justify-between"
+                  style={{
+                    padding: "32px 28px 28px",
+                    border: "1px solid rgba(245, 242, 236, 0.12)",
+                    backgroundColor: "rgba(245, 242, 236, 0.03)",
+                  }}
+                >
                   <p style={{ fontFamily: "var(--font-mono), 'Courier New', monospace", color: "var(--color-brass)", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase" }}>Sovereign Intelligence</p>
                   <p className="font-normal" style={{ fontFamily: "var(--font-display)", color: "var(--color-stone)", fontSize: "7rem", lineHeight: "1", letterSpacing: "-0.03em" }}>I</p>
                   <div className="flex flex-col gap-5">
@@ -410,9 +435,11 @@ export default function Home() {
         </section>
       </RevealSection>
 
-      {/* ── Section C: Annual Conclave ────────────────────────────────────── */}
+      {/* ── Annual Conclave ───────────────────────────────────────────────── */}
+      {/* R1 — mobile: py-20 (was py-40) */}
+      {/* C2 — .conclave-grid: single column on mobile, 1fr 1fr on desktop */}
       <RevealSection>
-        <section className="px-6 py-40" style={{ backgroundColor: "var(--color-stone)" }}>
+        <section className="px-6 py-20 md:py-40" style={{ backgroundColor: "var(--color-stone)" }}>
           <div className="w-full max-w-[1080px] mx-auto">
 
             <p className="label mb-12" style={{ color: "var(--color-brass)" }}>
@@ -447,17 +474,8 @@ export default function Home() {
               Not to transact. Not to perform. To remember what the room is for.
             </p>
 
-            {/* Symmetric editorial image grid — two equal columns */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "32px",
-                alignItems: "start",
-                marginTop: "64px",
-                marginBottom: "64px",
-              }}
-            >
+            {/* C2 — .conclave-grid handles responsive layout via CSS */}
+            <div className="conclave-grid">
               <FadeIn style={{ width: "100%" }}>
                 <Image
                   src="/images/conclave-table.JPG"
@@ -466,7 +484,7 @@ export default function Home() {
                   height={981}
                   quality={100}
                   style={{ width: "100%", height: "auto", display: "block", borderRadius: 0 }}
-                  sizes="50vw"
+                  sizes="(max-width: 767px) 100vw, 50vw"
                 />
               </FadeIn>
 
@@ -478,12 +496,11 @@ export default function Home() {
                   height={981}
                   quality={100}
                   style={{ width: "100%", height: "auto", display: "block", borderRadius: 0 }}
-                  sizes="50vw"
+                  sizes="(max-width: 767px) 100vw, 50vw"
                 />
               </FadeIn>
             </div>
 
-            {/* Closing line */}
             <p
               style={{
                 fontFamily: "var(--font-display)",
@@ -510,19 +527,21 @@ export default function Home() {
       </div>
 
       {/* ── Membership CTA ───────────────────────────────────────────────── */}
+      {/* R1 — mobile: py-12 (was py-20) */}
       <RevealSection>
-        <section className="px-6 py-20" style={{ backgroundColor: "var(--color-stone)" }}>
+        <section className="px-6 py-12 md:py-20" style={{ backgroundColor: "var(--color-stone)" }}>
           <div className="w-full max-w-[640px] mx-auto flex flex-col items-center text-center">
 
             <p className="label mb-10" style={{ color: "var(--color-brass)" }}>
               Membership
             </p>
 
+            {/* R5 — removed <br /> — let text wrap naturally on mobile */}
             <h2
               className="font-normal mb-10 tracking-[-0.02em]"
               style={{ fontFamily: "var(--font-display)", color: "var(--color-navy)", fontSize: "clamp(2rem, 3.5vw, 2.6rem)", lineHeight: "1.2" }}
             >
-              Membership applications<br />are now open.
+              Membership applications are now open.
             </h2>
 
             <p className="mb-12" style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", color: "var(--color-slate)", fontSize: "16px", lineHeight: "1.9", maxWidth: "480px" }}>
@@ -538,7 +557,8 @@ export default function Home() {
               Begin Application
             </a>
 
-            <p style={{ fontFamily: "var(--font-mono), 'Courier New', monospace", color: "rgba(92, 100, 112, 0.60)", fontSize: "11px", letterSpacing: "0.04em" }}>
+            {/* R5 — disclaimer increased from 11px to 12px */}
+            <p style={{ fontFamily: "var(--font-mono), 'Courier New', monospace", color: "rgba(92, 100, 112, 0.60)", fontSize: "12px", letterSpacing: "0.04em" }}>
               Applications are reviewed individually. Not every application results in an offer.
             </p>
 
@@ -547,8 +567,15 @@ export default function Home() {
       </RevealSection>
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
-      <footer className="px-6 py-16" style={{ backgroundColor: "var(--color-navy)" }}>
-        <div className="w-full max-w-[1080px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10">
+      {/* N3 — top border; R1 — gap-8 on mobile */}
+      <footer
+        className="px-6 py-16"
+        style={{
+          backgroundColor: "var(--color-navy)",
+          borderTop: "1px solid rgba(245, 242, 236, 0.08)",
+        }}
+      >
+        <div className="w-full max-w-[1080px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
 
           <div className="flex flex-col gap-3">
             <p style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", fontWeight: 500, fontSize: "13px", letterSpacing: "0.08em", color: "var(--color-stone)" }}>
