@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 import ParallaxSection from "@/components/ParallaxSection";
+import FadeInOnMount from "@/components/FadeInOnMount";
 
 export const metadata: Metadata = {
   title: "About — Sovereign Chess Society Dubai",
@@ -36,7 +37,7 @@ export default function AboutPage() {
           className="flex flex-col items-center justify-center px-6 py-24 text-center"
           style={{ minHeight: "50vh" }}
         >
-          <div className="w-full max-w-[720px] mx-auto flex flex-col items-center">
+          <FadeInOnMount delay={200} className="w-full max-w-[720px] mx-auto flex flex-col items-center">
 
             <p style={{ ...mono, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-brass)" }}>
               About
@@ -69,7 +70,7 @@ export default function AboutPage() {
               A private members institution for intellectually serious operators who play chess.
             </p>
 
-          </div>
+          </FadeInOnMount>
         </section>
 
         {/* ── SECTION 2 — THE ORIGIN ───────────────────────────────────────── */}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
+import FadeInOnMount from "@/components/FadeInOnMount";
 import RevealSection from "@/components/RevealSection";
 import ParallaxSection from "@/components/ParallaxSection";
 import Footer from "@/components/Footer";
@@ -27,65 +28,73 @@ export default function Home() {
       >
         <div className="w-full max-w-2xl flex flex-col items-center text-center">
 
-          <p className="label mb-5">
-            Dubai&nbsp;&bull;&nbsp;Founded MMXXVI
-          </p>
+          <FadeInOnMount delay={200}>
+            <p className="label mb-5">
+              Dubai&nbsp;&bull;&nbsp;Founded MMXXVI
+            </p>
+          </FadeInOnMount>
 
           {/* N4 — clamp for very small screens */}
-          <h1
-            className="leading-[1.18] font-normal mb-8 tracking-[-0.01em]"
-            style={{
-              fontFamily: "var(--font-display)",
-              color: "var(--color-navy)",
-              fontSize: "clamp(1.8rem, 8vw, 2.6rem)",
-            }}
-          >
-            The Private Home For<br />
-            Intellectually Serious Operators.
-          </h1>
+          <FadeInOnMount delay={400}>
+            <h1
+              className="leading-[1.18] font-normal mb-8 tracking-[-0.01em]"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--color-navy)",
+                fontSize: "clamp(1.8rem, 8vw, 2.6rem)",
+              }}
+            >
+              The Private Home For<br />
+              Intellectually Serious Operators.
+            </h1>
+          </FadeInOnMount>
 
-          <p
-            className="text-base leading-[1.8] font-normal max-w-[600px] mb-14"
-            style={{
-              fontFamily: "var(--font-inter), system-ui, sans-serif",
-              color: "var(--color-slate)",
-            }}
-          >
-            A private members institution for founders, investors, executives,
-            and family office principals who share a common language: chess.
-          </p>
+          <FadeInOnMount delay={600}>
+            <p
+              className="text-base leading-[1.8] font-normal max-w-[600px] mb-14"
+              style={{
+                fontFamily: "var(--font-inter), system-ui, sans-serif",
+                color: "var(--color-slate)",
+              }}
+            >
+              A private members institution for founders, investors, executives,
+              and family office principals who share a common language: chess.
+            </p>
+          </FadeInOnMount>
 
           {/* R3 — buttons: fixed max-width via .btn-primary / .btn-secondary CSS */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
-              href="#"
-              className="btn-primary inline-block px-7 py-3 text-sm tracking-wide"
-              style={{
-                backgroundColor: "var(--color-navy)",
-                color: "var(--color-stone)",
-                fontFamily: "var(--font-inter), system-ui, sans-serif",
-                borderRadius: "2px",
-                textDecoration: "none",
-              }}
-            >
-              Apply For Membership
-            </a>
+          <FadeInOnMount delay={800}>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="#"
+                className="btn-primary inline-block px-7 py-3 text-sm tracking-wide"
+                style={{
+                  backgroundColor: "var(--color-navy)",
+                  color: "var(--color-stone)",
+                  fontFamily: "var(--font-inter), system-ui, sans-serif",
+                  borderRadius: "2px",
+                  textDecoration: "none",
+                }}
+              >
+                Apply For Membership
+              </a>
 
-            <a
-              href="#"
-              className="btn-secondary inline-block px-7 py-3 text-sm tracking-wide border"
-              style={{
-                color: "var(--color-navy)",
-                borderColor: "var(--color-navy)",
-                backgroundColor: "transparent",
-                fontFamily: "var(--font-inter), system-ui, sans-serif",
-                borderRadius: "2px",
-                textDecoration: "none",
-              }}
-            >
-              Explore The Society
-            </a>
-          </div>
+              <a
+                href="#"
+                className="btn-secondary inline-block px-7 py-3 text-sm tracking-wide border"
+                style={{
+                  color: "var(--color-navy)",
+                  borderColor: "var(--color-navy)",
+                  backgroundColor: "transparent",
+                  fontFamily: "var(--font-inter), system-ui, sans-serif",
+                  borderRadius: "2px",
+                  textDecoration: "none",
+                }}
+              >
+                Explore The Society
+              </a>
+            </div>
+          </FadeInOnMount>
 
         </div>
       </section>

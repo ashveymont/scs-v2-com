@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
+import FadeInOnMount from "@/components/FadeInOnMount";
 
 export const metadata: Metadata = {
   title: "Membership — Private Chess Society Dubai",
@@ -37,7 +38,7 @@ export default function MembershipPage() {
           className="flex flex-col items-center justify-center px-6 py-32 text-center"
           style={{ minHeight: "60vh" }}
         >
-          <div className="w-full max-w-[720px] mx-auto flex flex-col items-center">
+          <FadeInOnMount delay={200} className="w-full max-w-[720px] mx-auto flex flex-col items-center">
 
             <p className="label" style={{ color: "var(--color-brass)" }}>
               Membership
@@ -99,7 +100,7 @@ export default function MembershipPage() {
               Begin Application
             </a>
 
-          </div>
+          </FadeInOnMount>
         </section>
 
         {/* ── SECTION 2 — WHO BELONGS ──────────────────────────────────────── */}

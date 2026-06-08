@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
+import FadeInOnMount from "@/components/FadeInOnMount";
 
 export const metadata: Metadata = {
   title: "The Journal — Chess. Capital. Cognition.",
@@ -32,7 +33,7 @@ export default function JournalPage() {
 
         {/* ── SECTION 1 — HERO ─────────────────────────────────────────────── */}
         <section className="flex flex-col items-center justify-center px-6 py-24 text-center">
-          <div className="w-full max-w-[720px] mx-auto flex flex-col items-center">
+          <FadeInOnMount delay={200} className="w-full max-w-[720px] mx-auto flex flex-col items-center">
 
             <p style={{ ...mono, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-brass)" }}>
               The Journal
@@ -64,7 +65,7 @@ export default function JournalPage() {
               The Journal of the Sovereign Chess Society. Published for founders, investors, and operators who understand that how you think determines what you build.
             </p>
 
-          </div>
+          </FadeInOnMount>
         </section>
 
         {/* ── SECTION 2 — FEATURED ARTICLE ─────────────────────────────────── */}
