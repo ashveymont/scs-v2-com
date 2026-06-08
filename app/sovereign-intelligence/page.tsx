@@ -49,7 +49,7 @@ export default function SovereignIntelligencePage() {
     <>
       <Nav />
 
-      <div style={{ paddingTop: "62px" }}>
+      <div style={{ paddingTop: "62px", backgroundColor: "var(--color-navy)" }}>
 
         {/* ── SECTION 1 — HERO ─────────────────────────────────────────────── */}
         <section
