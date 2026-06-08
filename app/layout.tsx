@@ -26,8 +26,42 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Sovereign Chess Society",
-  description: "A private members institution.",
+  metadataBase: new URL("https://www.sovereignchesssociety.com"),
+  title: {
+    default: "Sovereign Chess Society",
+    template: "%s — Sovereign Chess Society",
+  },
+  description: "A private members institution for intellectually serious operators who play chess. Founded in Dubai.",
+  keywords: ["private members club", "chess", "dubai", "operators", "founders", "investors"],
+  alternates: {
+    canonical: "https://www.sovereignchesssociety.com",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.sovereignchesssociety.com",
+    siteName: "Sovereign Chess Society",
+    title: "Sovereign Chess Society",
+    description: "A private members institution for intellectually serious operators who play chess. Founded in Dubai.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sovereign Chess Society",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sovereign Chess Society",
+    description: "A private members institution for intellectually serious operators who play chess. Founded in Dubai.",
+    images: ["/images/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

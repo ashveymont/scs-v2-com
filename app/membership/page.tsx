@@ -4,8 +4,13 @@ import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 
 export const metadata: Metadata = {
-  title: "Membership — The Sovereign Chess Society",
-  description: "A private institution for intellectually serious operators. Admission by invitation and application.",
+  title: "Membership",
+  description: "Admission to the Sovereign Chess Society is selective. The Society does not sell membership. The Society grants admission.",
+  openGraph: {
+    title: "Membership — Sovereign Chess Society",
+    description: "The five standards. The admissions process. Who belongs and who does not.",
+    url: "https://www.sovereignchesssociety.com/membership",
+  },
 };
 
 const mono: React.CSSProperties = {

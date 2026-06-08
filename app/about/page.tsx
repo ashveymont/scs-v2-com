@@ -5,8 +5,13 @@ import RevealSection from "@/components/RevealSection";
 import ParallaxSection from "@/components/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "About — The Sovereign Chess Society",
-  description: "A private members institution for intellectually serious operators who play chess. Founded in Dubai.",
+  title: "About",
+  description: "The Sovereign Chess Society was founded on a single observation: the most valuable thing a serious operator can access is a room of equally serious people.",
+  openGraph: {
+    title: "About — Sovereign Chess Society",
+    description: "Built for a room that did not exist. The origin, founding insight, and vision of the Sovereign Chess Society.",
+    url: "https://www.sovereignchesssociety.com/about",
+  },
 };
 
 const mono: React.CSSProperties = {

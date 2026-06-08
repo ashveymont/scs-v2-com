@@ -4,8 +4,13 @@ import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 
 export const metadata: Metadata = {
-  title: "The Journal — The Sovereign Chess Society",
-  description: "Chess, capital, and cognition. The Journal of the Sovereign Chess Society, published for founders, investors, and operators.",
+  title: "The Journal",
+  description: "Chess. Capital. Cognition. The Journal of the Sovereign Chess Society.",
+  openGraph: {
+    title: "The Journal — Sovereign Chess Society",
+    description: "Published for founders, investors, and operators who understand that how you think determines what you build.",
+    url: "https://www.sovereignchesssociety.com/journal",
+  },
 };
 
 const mono: React.CSSProperties = {

@@ -4,8 +4,13 @@ import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 
 export const metadata: Metadata = {
-  title: "Why Serious Operators Play Chess — The Journal",
-  description: "Chess is not a hobby. For the operator who takes it seriously, chess is a cognitive laboratory. Published by the Sovereign Chess Society.",
+  title: "Why Serious Operators Play Chess",
+  description: "Chess is not a hobby. For the operator who takes it seriously, chess is a cognitive laboratory where the quality of your thinking is stripped of every advantage that normally protects you.",
+  openGraph: {
+    title: "Why Serious Operators Play Chess — The Journal",
+    description: "What chess reveals about the quality of your thinking. Published by the Sovereign Chess Society.",
+    url: "https://www.sovereignchesssociety.com/journal/why-serious-operators-play-chess",
+  },
 };
 
 const mono: React.CSSProperties = {

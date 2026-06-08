@@ -1,8 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import RevealSection from "@/components/RevealSection";
 import ParallaxSection from "@/components/ParallaxSection";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "The Private Home For Intellectually Serious Operators",
+  description: "Sovereign Chess Society is a private members institution for founders, investors, executives, and family office principals who share a common language: chess.",
+  openGraph: {
+    title: "Sovereign Chess Society — Dubai",
+    description: "The private home for intellectually serious operators. A private members institution founded in Dubai.",
+    url: "https://www.sovereignchesssociety.com",
+  },
+};
 
 export default function Home() {
   return (
