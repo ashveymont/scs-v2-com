@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 
 export const metadata: Metadata = {
-  title: "The Journal",
-  description: "Chess. Capital. Cognition. The Journal of the Sovereign Chess Society.",
+  title: "The Journal — Chess. Capital. Cognition.",
+  description: "The Journal of the Sovereign Chess Society. Published for founders, investors and operators who understand that how you think determines what you build.",
   openGraph: {
-    title: "The Journal — Sovereign Chess Society",
+    title: "The Journal — Chess. Capital. Cognition.",
     description: "Published for founders, investors, and operators who understand that how you think determines what you build.",
     url: "https://www.sovereignchesssociety.com/journal",
   },

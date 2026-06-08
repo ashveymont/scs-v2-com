@@ -5,10 +5,10 @@ import RevealSection from "@/components/RevealSection";
 import ParallaxSection from "@/components/ParallaxSection";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "The Sovereign Chess Society was founded on a single observation: the most valuable thing a serious operator can access is a room of equally serious people.",
+  title: "About — Sovereign Chess Society Dubai",
+  description: "The Sovereign Chess Society was founded in Dubai for intellectually serious operators. A private institution where chess is the shared language and the room is the product.",
   openGraph: {
-    title: "About — Sovereign Chess Society",
+    title: "About — Sovereign Chess Society Dubai",
     description: "Built for a room that did not exist. The origin, founding insight, and vision of the Sovereign Chess Society.",
     url: "https://www.sovereignchesssociety.com/about",
   },

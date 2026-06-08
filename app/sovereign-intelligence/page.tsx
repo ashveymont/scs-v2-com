@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 
 export const metadata: Metadata = {
-  title: "Sovereign Intelligence",
-  description: "The institutional publication of the Sovereign Chess Society. Quarterly research at the intersection of chess, capital, and cognition.",
+  title: "Sovereign Intelligence — Chess, Capital and Cognition",
+  description: "The institutional publication of the Sovereign Chess Society. Quarterly research at the intersection of chess, capital, and cognition for serious operators in Dubai.",
   openGraph: {
-    title: "Sovereign Intelligence — Sovereign Chess Society",
+    title: "Sovereign Intelligence — Chess, Capital and Cognition",
     description: "The institutional publication. Issue I: The Opening Trap — what the first ten moves reveal about how serious operators think.",
     url: "https://www.sovereignchesssociety.com/sovereign-intelligence",
   },

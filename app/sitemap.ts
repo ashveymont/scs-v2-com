@@ -21,12 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: "https://www.sovereignchesssociety.com/application",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: "https://www.sovereignchesssociety.com/sovereign-intelligence",
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -36,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://www.sovereignchesssociety.com/journal",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: "https://www.sovereignchesssociety.com/journal/why-serious-operators-play-chess",

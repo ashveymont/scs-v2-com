@@ -6,8 +6,8 @@ import ParallaxSection from "@/components/ParallaxSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "The Private Home For Intellectually Serious Operators",
-  description: "Sovereign Chess Society is a private members institution for founders, investors, executives, and family office principals who share a common language: chess.",
+  title: "Sovereign Chess Society — The Private Home For Serious Operators",
+  description: "A private members institution in Dubai for founders, investors, family office principals and executives who share a common language: chess. Founding membership now open.",
   openGraph: {
     title: "Sovereign Chess Society — Dubai",
     description: "The private home for intellectually serious operators. A private members institution founded in Dubai.",
@@ -23,6 +23,7 @@ export default function Home() {
       <section
         className="flex flex-col items-center justify-center px-6"
         style={{ minHeight: "calc(100vh - 62px)" }}
+        aria-label="Sovereign Chess Society — Private Members Institution Dubai"
       >
         <div className="w-full max-w-2xl flex flex-col items-center text-center">
 

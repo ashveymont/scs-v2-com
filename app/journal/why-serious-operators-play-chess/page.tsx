@@ -4,13 +4,31 @@ import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 
 export const metadata: Metadata = {
-  title: "Why Serious Operators Play Chess",
-  description: "Chess is not a hobby. For the operator who takes it seriously, chess is a cognitive laboratory where the quality of your thinking is stripped of every advantage that normally protects you.",
+  title: "Why Serious Operators Play Chess — The Journal",
+  description: "Chess reveals the quality of your thinking. A Journal article from the Sovereign Chess Society examining what chess teaches serious operators about decision-making.",
   openGraph: {
     title: "Why Serious Operators Play Chess — The Journal",
     description: "What chess reveals about the quality of your thinking. Published by the Sovereign Chess Society.",
     url: "https://www.sovereignchesssociety.com/journal/why-serious-operators-play-chess",
   },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Why Serious Operators Play Chess",
+  description: "What chess reveals about the quality of your thinking",
+  author: {
+    "@type": "Organization",
+    name: "Sovereign Chess Society",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Sovereign Chess Society",
+    url: "https://www.sovereignchesssociety.com",
+  },
+  datePublished: "2026-01-01",
+  url: "https://www.sovereignchesssociety.com/journal/why-serious-operators-play-chess",
 };
 
 const mono: React.CSSProperties = {
@@ -79,6 +97,10 @@ const bodyText = (text: string, key: number) => (
 export default function ArticlePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Nav />
 
       <div style={{ paddingTop: "62px" }}>
@@ -302,6 +324,21 @@ export default function ArticlePage() {
               <p style={{ ...sans, fontSize: "15px", color: "rgba(245,242,236,0.60)", lineHeight: 1.8, marginTop: "16px" }}>
                 Founding membership is limited to 30 members.
               </p>
+
+              <a
+                href="/about"
+                style={{
+                  ...mono,
+                  fontSize: "12px",
+                  letterSpacing: "0.08em",
+                  color: "var(--color-brass)",
+                  textDecoration: "none",
+                  display: "inline-block",
+                  marginTop: "32px",
+                }}
+              >
+                Learn more about the Society →
+              </a>
 
               <a
                 href="/application"

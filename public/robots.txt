@@ -1,6 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /about
+Allow: /membership
+Allow: /journal
+Allow: /sovereign-intelligence
 Disallow: /admin
 Disallow: /api/
+Disallow: /application
 
 Sitemap: https://www.sovereignchesssociety.com/sitemap.xml

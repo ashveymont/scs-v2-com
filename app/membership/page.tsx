@@ -4,10 +4,10 @@ import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 
 export const metadata: Metadata = {
-  title: "Membership",
-  description: "Admission to the Sovereign Chess Society is selective. The Society does not sell membership. The Society grants admission.",
+  title: "Membership — Private Chess Society Dubai",
+  description: "Founding membership in the Sovereign Chess Society is limited to 30 members. A private institution for Dubai founders, investors, and executives who play chess.",
   openGraph: {
-    title: "Membership — Sovereign Chess Society",
+    title: "Membership — Private Chess Society Dubai",
     description: "The five standards. The admissions process. Who belongs and who does not.",
     url: "https://www.sovereignchesssociety.com/membership",
   },
