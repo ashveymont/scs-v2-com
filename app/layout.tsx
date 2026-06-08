@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description: "A private members institution for intellectually serious operators who play chess. Founded in Dubai.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Sovereign Chess Society",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sovereign Chess Society",
     description: "A private members institution for intellectually serious operators who play chess. Founded in Dubai.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,
