@@ -3,7 +3,12 @@
 import { useEffect, useState } from "react";
 
 export default function Nav() {
-  const links = ["About", "Membership", "Journal", "Apply"] as const;
+  const links = [
+    { label: "About",      href: "#" },
+    { label: "Membership", href: "/membership" },
+    { label: "Journal",    href: "#" },
+    { label: "Apply",      href: "/membership#application" },
+  ] as const;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -59,8 +64,8 @@ export default function Nav() {
           <nav className="hidden md:flex items-center gap-10">
             {links.map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="nav-link uppercase"
                 style={{
                   fontFamily: "var(--font-mono), 'Courier New', monospace",
@@ -70,7 +75,7 @@ export default function Nav() {
                   textDecoration: "none",
                 }}
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </nav>
@@ -140,8 +145,8 @@ export default function Nav() {
         <nav className="flex flex-col items-center" style={{ gap: "40px" }}>
           {links.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               onClick={() => setMenuOpen(false)}
               style={{
                 fontFamily: "var(--font-display)",
@@ -153,7 +158,7 @@ export default function Nav() {
                 letterSpacing: "-0.01em",
               }}
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </nav>
