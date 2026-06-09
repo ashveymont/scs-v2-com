@@ -22,6 +22,7 @@ export default function Footer() {
           {[
             { label: "About",                  href: "/about" },
             { label: "Membership",             href: "/membership" },
+            { label: "FAQ",                    href: "/faq" },
             { label: "Journal",                href: "/journal" },
             { label: "Sovereign Intelligence", href: "/sovereign-intelligence" },
             { label: "Application",            href: "/application" },

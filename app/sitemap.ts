@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://www.sovereignchesssociety.com/faq",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://www.sovereignchesssociety.com/journal/why-serious-operators-play-chess",
       lastModified: new Date(),
       changeFrequency: "yearly",

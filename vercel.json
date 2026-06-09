@@ -16,11 +16,6 @@
       "permanent": true
     },
     {
-      "source": "/faq",
-      "destination": "/membership",
-      "permanent": true
-    },
-    {
       "source": "/the-conclave",
       "destination": "/about",
       "permanent": true
