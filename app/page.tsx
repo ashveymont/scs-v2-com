@@ -412,7 +412,7 @@ export default function Home() {
                   <p>A public edition is available. The member edition goes further.</p>
                 </div>
                 <a
-                  href="mailto:info@sovereignchesssociety.com"
+                  href="/sovereign-intelligence"
                   className="si-cta"
                   style={{ fontFamily: "var(--font-mono), 'Courier New', monospace", color: "var(--color-brass)", fontSize: "12px", letterSpacing: "0.10em", textDecoration: "none" }}
                 >
