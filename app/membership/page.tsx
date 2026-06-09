@@ -53,7 +53,7 @@ export default function MembershipPage() {
                 lineHeight: 1.2,
               }}
             >
-              Membership
+              The room has a standard.
             </h1>
 
             <p
@@ -102,6 +102,36 @@ export default function MembershipPage() {
 
           </FadeInOnMount>
         </section>
+
+        {/* ── EDITORIAL DECLARATION ────────────────────────────────────────── */}
+        <RevealSection>
+          <section className="px-6 py-16 text-center" style={{ backgroundColor: "var(--color-stone)" }}>
+            <div className="w-full max-w-[720px] mx-auto flex flex-col items-center" style={{ gap: "24px" }}>
+              <p
+                className="font-normal"
+                style={{
+                  ...display,
+                  fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+                  color: "var(--color-navy)",
+                  lineHeight: 1.5,
+                }}
+              >
+                The Society is not built for everyone.
+              </p>
+              <p
+                className="font-normal"
+                style={{
+                  ...display,
+                  fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+                  color: "var(--color-navy)",
+                  lineHeight: 1.5,
+                }}
+              >
+                It is built for people who understand that the quality of their thinking determines the quality of their life.
+              </p>
+            </div>
+          </section>
+        </RevealSection>
 
         {/* ── SECTION 2 — WHO BELONGS ──────────────────────────────────────── */}
         <RevealSection>
@@ -213,7 +243,7 @@ export default function MembershipPage() {
           <section className="px-6 py-16 md:py-32" style={{ backgroundColor: "var(--color-stone)" }}>
             <div className="w-full max-w-[1080px] mx-auto">
 
-              <p className="label">The Standard</p>
+              <p className="label" style={{ color: "var(--color-brass)" }}>The Standard</p>
 
               <h2
                 className="font-normal mt-4 tracking-[-0.02em]"
@@ -444,7 +474,7 @@ export default function MembershipPage() {
           <section className="px-6 py-16 md:py-24" style={{ backgroundColor: "var(--color-stone)" }}>
             <div className="w-full max-w-[720px] mx-auto">
 
-              <p className="label">Admission</p>
+              <p className="label" style={{ color: "var(--color-brass)" }}>Admission</p>
 
               <h2
                 className="font-normal mt-4 tracking-[-0.02em]"

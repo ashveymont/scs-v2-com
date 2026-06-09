@@ -67,7 +67,7 @@ export default function AboutPage() {
                 maxWidth: "560px",
               }}
             >
-              A private members institution for intellectually serious operators who play chess.
+              Built on a single observation. Founded in Dubai. Designed to outlast its founder.
             </p>
 
           </FadeInOnMount>

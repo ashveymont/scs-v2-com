@@ -380,7 +380,7 @@ function BtnBack({ onClick }: { onClick: () => void }) {
 
 // ── Step indicator ────────────────────────────────────────────────────────────
 
-const STEP_NAMES = ["IDENTITY", "CHESS", "PROFESSIONAL", "ESSAY", "REFERENCES"];
+const STEP_NAMES = ["IDENTITY", "CHESS", "PROFESSIONAL", "ESSAYS", "REFERENCES"];
 
 function StepIndicator({ step }: { step: number }) {
   return (
@@ -395,7 +395,7 @@ function StepIndicator({ step }: { step: number }) {
         textTransform: "uppercase",
       }}
     >
-      Step {String(step).padStart(2, "0")} of 05 — {STEP_NAMES[step - 1]}
+      {String(step).padStart(2, "0")} — {STEP_NAMES[step - 1]}
     </p>
   );
 }
@@ -449,10 +449,15 @@ function ReferenceBlock({
           letterSpacing: "0.12em",
           color: "var(--color-brass)",
           textTransform: "uppercase",
-          marginBottom: "24px",
+          marginBottom: "12px",
         }}
       >
         {label}
+      </p>
+      <p style={{ ...sans, fontSize: "14px", color: "var(--color-slate)", lineHeight: 1.7, fontStyle: "italic", marginBottom: "24px" }}>
+        {label === "Professional Reference"
+          ? "Someone who can speak to your judgment, contribution, and professional character."
+          : "Someone who knows you beyond titles, achievements, or business success."}
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         <div><FieldLabel>Name</FieldLabel><LineInput value={nameVal} onChange={onName} /></div>
@@ -467,6 +472,7 @@ function ReferenceBlock({
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 export default function ApplicationForm() {
+  const [started, setStarted] = useState(false);
   const [step, setStep] = useState(1);
   const [data, setData] = useState<FormData>(EMPTY);
 
@@ -481,11 +487,14 @@ export default function ApplicationForm() {
   }, []);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const set = useCallback(
     (field: keyof FormData) =>
-      (value: string | boolean) =>
-        setData((d) => ({ ...d, [field]: value })),
+      (value: string | boolean) => {
+        setSubmitError(false);
+        setData((d) => ({ ...d, [field]: value }));
+      },
     []
   );
 
@@ -517,11 +526,66 @@ export default function ApplicationForm() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err) {
       console.error("Submission error:", err);
-      alert("Something went wrong. Please try again.");
+      setSubmitError(true);
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  // ── Prelude ───────────────────────────────────────────────────────────────────
+
+  if (!started) {
+    return (
+      <div
+        className="flex flex-col items-center justify-center px-6"
+        style={{ minHeight: "calc(100vh - 62px)" }}
+      >
+        <div className="flex flex-col items-center text-center" style={{ maxWidth: "560px", width: "100%" }}>
+
+          <p style={{ ...mono, fontSize: "11px", letterSpacing: "0.12em", color: "var(--color-brass)", textTransform: "uppercase" }}>
+            Membership Application
+          </p>
+
+          <h1
+            className="font-normal tracking-[-0.02em]"
+            style={{ ...display, fontSize: "clamp(1.8rem, 3vw, 2.4rem)", color: "var(--color-navy)", lineHeight: 1.3, marginTop: "24px" }}
+          >
+            Before you begin.
+          </h1>
+
+          <div
+            className="text-left mx-auto"
+            style={{ ...sans, fontSize: "16px", color: "var(--color-slate)", lineHeight: 1.9, marginTop: "32px", display: "flex", flexDirection: "column", gap: "20px", maxWidth: "480px" }}
+          >
+            <p>Membership applications are reviewed individually by the Membership Committee.</p>
+            <p>The Society is intentionally selective. Not every applicant is invited to continue.</p>
+            <p>This application requires approximately 10 minutes. Five sections. Two essay questions.</p>
+            <p>Proceed only if you believe you would meaningfully contribute to the room.</p>
+          </div>
+
+          <button
+            onClick={() => setStarted(true)}
+            style={{
+              ...sans,
+              backgroundColor: "var(--color-navy)",
+              color: "var(--color-stone)",
+              padding: "16px 40px",
+              borderRadius: "2px",
+              fontWeight: 500,
+              fontSize: "14px",
+              letterSpacing: "0.02em",
+              border: "none",
+              cursor: "pointer",
+              marginTop: "48px",
+            }}
+          >
+            Begin Application
+          </button>
+
+        </div>
+      </div>
+    );
+  }
 
   // ── Confirmation ─────────────────────────────────────────────────────────────
 
@@ -764,6 +828,18 @@ export default function ApplicationForm() {
               {isSubmitting ? "Submitting…" : "Submit Application"}
             </BtnPrimary>
           </div>
+          {submitError && (
+            <p style={{
+              fontFamily: "var(--font-mono), 'Courier New', monospace",
+              fontSize: "11px",
+              color: "var(--color-brass)",
+              letterSpacing: "0.08em",
+              marginTop: "16px",
+              textAlign: "center",
+            }}>
+              Something went wrong. Please try again or contact info@sovereignchesssociety.com
+            </p>
+          )}
         </div>
       )}
 

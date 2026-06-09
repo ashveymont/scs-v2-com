@@ -54,7 +54,7 @@ export default function SovereignIntelligencePage() {
 
         {/* ── SECTION 1 — HERO ─────────────────────────────────────────────── */}
         <section
-          className="flex flex-col items-center justify-center px-6 py-24 text-center"
+          className="flex flex-col items-center justify-center px-6 py-16 md:py-24 text-center"
           style={{ backgroundColor: "var(--color-navy)", minHeight: "50vh" }}
         >
           <FadeInOnMount delay={200} className="w-full max-w-[720px] mx-auto flex flex-col items-center">
@@ -539,7 +539,7 @@ export default function SovereignIntelligencePage() {
 
               <div className="flex flex-col items-center" style={{ marginTop: "40px", gap: "16px" }}>
                 <a
-                  href="/membership"
+                  href="/application"
                   style={{
                     ...sans,
                     backgroundColor: "transparent",

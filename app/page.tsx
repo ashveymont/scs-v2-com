@@ -91,7 +91,7 @@ export default function Home() {
                   textDecoration: "none",
                 }}
               >
-                Explore The Society
+                Read the founding story
               </a>
             </div>
           </FadeInOnMount>

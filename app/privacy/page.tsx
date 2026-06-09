@@ -27,8 +27,15 @@ export default function PrivacyPage() {
         <section className="px-6 py-24">
           <div className="w-full max-w-[680px] mx-auto">
 
+            <a
+              href="/"
+              style={{ ...mono, fontSize: "11px", letterSpacing: "0.08em", color: "var(--color-brass)", textDecoration: "none", display: "inline-block", marginBottom: "48px" }}
+            >
+              ← Sovereign Chess Society
+            </a>
+
             <p style={{ ...mono, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-slate)" }}>
-              Privacy
+              The Society
             </p>
 
             <h1

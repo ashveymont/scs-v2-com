@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const links = [
@@ -9,8 +10,14 @@ export default function Nav() {
     { label: "Journal",    href: "/journal" },
     { label: "Apply",      href: "/application" },
   ] as const;
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const isActive = (href: string) =>
+    href === "/journal"
+      ? pathname.startsWith("/journal")
+      : pathname === href;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -71,8 +78,9 @@ export default function Nav() {
                   fontFamily: "var(--font-mono), 'Courier New', monospace",
                   fontSize: "11px",
                   letterSpacing: "0.06em",
-                  color: "var(--color-slate)",
+                  color: isActive(link.href) ? "var(--color-brass)" : "var(--color-slate)",
                   textDecoration: "none",
+                  opacity: isActive(link.href) ? 1 : undefined,
                 }}
               >
                 {link.label}
@@ -151,7 +159,7 @@ export default function Nav() {
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "2rem",
-                color: "var(--color-navy)",
+                color: isActive(link.href) ? "var(--color-brass)" : "var(--color-navy)",
                 textDecoration: "none",
                 fontWeight: 400,
                 lineHeight: 1.2,

@@ -234,6 +234,9 @@ export default function JournalPage() {
                 <p style={{ ...sans, fontSize: "16px", color: "var(--color-slate)", lineHeight: 1.9 }}>
                   Every article is written for founders, investors, and executives who take both chess and their work seriously. Not as entertainment. As intellectual infrastructure.
                 </p>
+                <p style={{ ...sans, fontSize: "16px", color: "var(--color-slate)", lineHeight: 1.9 }}>
+                  Published quarterly. Each issue examines one question at the intersection of chess, capital, and cognition.
+                </p>
               </div>
 
               <p style={{ ...mono, fontSize: "11px", letterSpacing: "0.08em", color: "rgba(92,100,112,0.5)", marginTop: "32px" }}>

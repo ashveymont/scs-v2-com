@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
+import FadeInOnMount from "@/components/FadeInOnMount";
 
 export const metadata: Metadata = {
   title: "Why Serious Operators Play Chess — The Journal",
@@ -106,8 +107,8 @@ export default function ArticlePage() {
       <div style={{ paddingTop: "62px" }}>
 
         {/* ── ARTICLE HERO ─────────────────────────────────────────────────── */}
-        <section className="px-6 py-24 text-center" style={{ backgroundColor: "var(--color-stone)" }}>
-          <div className="w-full max-w-[680px] mx-auto flex flex-col items-center">
+        <section className="px-6 py-16 md:py-24 text-center" style={{ backgroundColor: "var(--color-stone)" }}>
+          <FadeInOnMount delay={200} className="w-full max-w-[680px] mx-auto flex flex-col items-center">
 
             <p style={{ ...mono, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-brass)" }}>
               The Journal — 001
@@ -146,7 +147,7 @@ export default function ArticlePage() {
 
             <hr style={{ border: "none", height: "1px", width: "40px", backgroundColor: "var(--color-brass)", margin: "32px auto 0" }} />
 
-          </div>
+          </FadeInOnMount>
         </section>
 
         {/* ── ARTICLE BODY ─────────────────────────────────────────────────── */}
