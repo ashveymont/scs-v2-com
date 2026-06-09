@@ -412,7 +412,7 @@ export default function Home() {
               className="font-normal mb-14 tracking-[-0.02em]"
               style={{ fontFamily: "var(--font-display)", color: "var(--color-navy)", fontSize: "clamp(2rem, 3.5vw, 2.6rem)", lineHeight: "1.2" }}
             >
-              Trust creates possibility.
+              Inside every institution, there is a room within the room.
             </h2>
 
             <div className="flex flex-col gap-8" style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", color: "var(--color-charcoal)", fontSize: "17px", lineHeight: "1.9" }}>
@@ -600,7 +600,7 @@ export default function Home() {
 
             <p className="mb-12" style={{ fontFamily: "var(--font-inter), system-ui, sans-serif", color: "var(--color-slate)", fontSize: "16px", lineHeight: "1.9", maxWidth: "480px" }}>
               Admission is selective. Applications are reviewed by the Membership
-              Committee. Founding membership is limited.
+              Committee. Founding membership is limited to 30 members.
             </p>
 
             <a
