@@ -686,6 +686,23 @@ export default function MembershipPage() {
                 Begin Application
               </a>
 
+              <a
+                href="/faq"
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  fontFamily: "var(--font-mono), 'Courier New', monospace",
+                  fontSize: "11px",
+                  letterSpacing: "0.08em",
+                  color: "var(--color-slate)",
+                  textDecoration: "none",
+                  marginTop: "24px",
+                  opacity: 0.7,
+                }}
+              >
+                Have questions? Read the FAQ →
+              </a>
+
               <p
                 className="mt-6"
                 style={{

@@ -5,6 +5,7 @@ import FadeInOnMount from "@/components/FadeInOnMount";
 import RevealSection from "@/components/RevealSection";
 import ParallaxSection from "@/components/ParallaxSection";
 import Footer from "@/components/Footer";
+import SIEmailCapture from "@/components/SIEmailCapture";
 
 export const metadata: Metadata = {
   title: "Sovereign Chess Society — The Private Home For Serious Operators",
@@ -93,6 +94,49 @@ export default function Home() {
               >
                 Read the founding story
               </a>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "8px",
+                marginTop: "48px",
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "var(--font-mono), 'Courier New', monospace",
+                  fontSize: "10px",
+                  letterSpacing: "0.15em",
+                  color: "var(--color-slate)",
+                  textTransform: "uppercase",
+                }}
+              >
+                Founding Members
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--font-mono), 'Courier New', monospace",
+                  fontSize: "15px",
+                  letterSpacing: "0.08em",
+                  color: "var(--color-brass)",
+                }}
+              >
+                03 / 30
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--font-mono), 'Courier New', monospace",
+                  fontSize: "10px",
+                  letterSpacing: "0.1em",
+                  color: "rgba(92,100,112,0.4)",
+                  textTransform: "uppercase",
+                }}
+              >
+                27 places remaining · Dubai Chapter
+              </div>
             </div>
           </FadeInOnMount>
 
@@ -418,6 +462,7 @@ export default function Home() {
                 >
                   Request the current issue →
                 </a>
+                <SIEmailCapture />
               </div>
 
               {/* R4 — .si-card makes width responsive (100% / max 260px) */}
