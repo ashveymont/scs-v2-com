@@ -25,6 +25,7 @@ export default function Footer() {
             { label: "Journal",                href: "/journal" },
             { label: "Sovereign Intelligence", href: "/sovereign-intelligence" },
             { label: "Application",            href: "/application" },
+            { label: "Privacy",                href: "/privacy" },
           ].map((link) => (
             <a
               key={link.label}
