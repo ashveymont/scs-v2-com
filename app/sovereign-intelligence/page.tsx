@@ -92,7 +92,7 @@ export default function SovereignIntelligencePage() {
 
             <div className="flex flex-wrap justify-center" style={{ marginTop: "40px", gap: "16px" }}>
               <a
-                href="mailto:intelligence@sovereignchesssociety.com"
+                href="mailto:info@sovereignchesssociety.com"
                 style={{
                   ...sans,
                   backgroundColor: "var(--color-brass)",
@@ -228,7 +228,7 @@ export default function SovereignIntelligencePage() {
                       Read full issue ↓
                     </a>
                     <a
-                      href="mailto:intelligence@sovereignchesssociety.com"
+                      href="mailto:info@sovereignchesssociety.com"
                       style={{ ...mono, fontSize: "12px", letterSpacing: "0.08em", color: "var(--color-slate)", textDecoration: "none" }}
                     >
                       Request member edition →
@@ -556,7 +556,7 @@ export default function SovereignIntelligencePage() {
                   Apply For Membership
                 </a>
                 <a
-                  href="mailto:intelligence@sovereignchesssociety.com"
+                  href="mailto:info@sovereignchesssociety.com"
                   style={{
                     ...mono,
                     fontSize: "12px",

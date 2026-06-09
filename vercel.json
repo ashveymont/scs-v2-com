@@ -26,11 +26,6 @@
       "permanent": true
     },
     {
-      "source": "/privacy",
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/journal/what-is-sovereign-chess",
       "destination": "/journal",
       "permanent": true

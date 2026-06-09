@@ -66,7 +66,7 @@ export default function Home() {
           <FadeInOnMount delay={800}>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
-                href="#"
+                href="/application"
                 className="btn-primary inline-block px-7 py-3 text-sm tracking-wide"
                 style={{
                   backgroundColor: "var(--color-navy)",
@@ -80,7 +80,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
+                href="/about"
                 className="btn-secondary inline-block px-7 py-3 text-sm tracking-wide border"
                 style={{
                   color: "var(--color-navy)",
@@ -412,7 +412,7 @@ export default function Home() {
                   <p>A public edition is available. The member edition goes further.</p>
                 </div>
                 <a
-                  href="#"
+                  href="mailto:info@sovereignchesssociety.com"
                   className="si-cta"
                   style={{ fontFamily: "var(--font-mono), 'Courier New', monospace", color: "var(--color-brass)", fontSize: "12px", letterSpacing: "0.10em", textDecoration: "none" }}
                 >
