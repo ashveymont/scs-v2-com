@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, IBM_Plex_Mono, Playfair_Display } from "next/font/google";
 import Nav from "@/components/Nav";
 import SmoothScroll from "@/components/SmoothScroll";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -124,6 +125,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col" style={{ paddingTop: "62px" }}>
         <Nav />
         <SmoothScroll>{children}</SmoothScroll>
+        <GoogleAnalytics gaId="G-6HDBWGW6E9" />
       </body>
     </html>
   );

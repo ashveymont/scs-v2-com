@@ -1,6 +1,12 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
 
 // ── Design tokens ────────────────────────────────────────────────────────────
 
@@ -463,6 +469,16 @@ function ReferenceBlock({
 export default function ApplicationForm() {
   const [step, setStep] = useState(1);
   const [data, setData] = useState<FormData>(EMPTY);
+
+  // GA4: track application started on mount
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "application_started", {
+        event_category: "Application",
+        event_label: "Step 1 Loaded",
+      });
+    }
+  }, []);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -491,6 +507,13 @@ export default function ApplicationForm() {
       });
       if (!res.ok) throw new Error("Submission failed");
       setSubmitted(true);
+      // GA4: track application completed
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "application_completed", {
+          event_category: "Application",
+          event_label: "Submission Confirmed",
+        });
+      }
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err) {
       console.error("Submission error:", err);
