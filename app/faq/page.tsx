@@ -147,7 +147,7 @@ const faqSchema = {
       name: "Who founded the Sovereign Chess Society?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Sovereign Chess Society was founded by Ashan Veymont — FIDE Chess Master, two-time State Chess Champion, and FIDE Certified Trainer. Ashan founded the Society after observing a consistent gap in the market for serious operators: there was no private institution that combined intellectual rigour, cultural depth, and genuine peer quality. His role within the Society is Founder and Custodian. The institution is designed to outlast any individual — including its founder.",
+        text: "The Sovereign Chess Society was founded by Ashan Veymont — Arena FIDE Chess Master, two-time State Chess Champion, and FIDE Certified Trainer. Ashan founded the Society after observing a consistent gap in the market for serious operators: there was no private institution that combined intellectual rigour, cultural depth, and genuine peer quality. His role within the Society is Founder and Custodian. The institution is designed to outlast any individual — including its founder.",
       },
     },
     {
@@ -235,7 +235,7 @@ const faqs = [
   {
     n: "15",
     q: "Who founded the Sovereign Chess Society?",
-    a: "The Sovereign Chess Society was founded by Ashan Veymont — FIDE Chess Master, two-time State Chess Champion, and FIDE Certified Trainer. Ashan founded the Society after observing a consistent gap in the market for serious operators: there was no private institution that combined intellectual rigour, cultural depth, and genuine peer quality. His role within the Society is Founder and Custodian. The institution is designed to outlast any individual — including its founder.",
+    a: "The Sovereign Chess Society was founded by Ashan Veymont — Arena FIDE Chess Master, two-time State Chess Champion, and FIDE Certified Trainer. Ashan founded the Society after observing a consistent gap in the market for serious operators: there was no private institution that combined intellectual rigour, cultural depth, and genuine peer quality. His role within the Society is Founder and Custodian. The institution is designed to outlast any individual — including its founder.",
   },
   {
     n: "16",

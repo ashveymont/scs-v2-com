@@ -208,7 +208,7 @@ export default function AboutPage() {
 
                   <div style={{ marginTop: "32px", display: "flex", flexDirection: "column", gap: "24px" }}>
                     {[
-                      "Ashan Veymont is a FIDE Chess Master and two-time State Chess Champion. He has spent the better part of a decade operating at the intersection of chess, capital, and strategy.",
+                      "Ashan Veymont is an Arena FIDE Chess Master and two-time State Chess Champion. He has spent the better part of a decade operating at the intersection of chess, capital, and strategy.",
                       "He founded the Sovereign Chess Society after observing a consistent gap in the market for serious operators: there was no private institution that combined intellectual rigour, cultural depth, and genuine peer quality.",
                       "His role within the Society is Founder and Custodian. The institution is designed to outlast any individual — including its founder.",
                     ].map((para, i) => (
