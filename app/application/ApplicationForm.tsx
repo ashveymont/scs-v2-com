@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
+import FadeInOnMount from "@/components/FadeInOnMount";
 
 declare global {
   interface Window {
@@ -540,6 +541,7 @@ export default function ApplicationForm() {
         className="flex flex-col items-center justify-center px-6"
         style={{ minHeight: "calc(100vh - 62px)" }}
       >
+        <FadeInOnMount delay={200}>
         <div className="flex flex-col items-center text-center" style={{ maxWidth: "560px", width: "100%" }}>
 
           <p style={{ ...mono, fontSize: "11px", letterSpacing: "0.12em", color: "var(--color-brass)", textTransform: "uppercase" }}>
@@ -583,6 +585,7 @@ export default function ApplicationForm() {
           </button>
 
         </div>
+        </FadeInOnMount>
       </div>
     );
   }
