@@ -124,7 +124,7 @@ export default function Home() {
                   color: "var(--color-brass)",
                 }}
               >
-                03 / 30
+                Applications now open
               </div>
               <div
                 style={{
@@ -135,7 +135,7 @@ export default function Home() {
                   textTransform: "uppercase",
                 }}
               >
-                27 places remaining · Dubai Chapter
+                Thirty seats · Dubai Chapter
               </div>
             </div>
           </FadeInOnMount>
